@@ -23,8 +23,7 @@ puts "Adding jobs and favourites to database"
     best_bits: "Find out meaningful patterns, things we don't get to see or realize as humans",
     worst_bits: "Lots of numbers",
     qualifications: "A love for math is all you need",
-    video_url: "data_scientist_n3y55p",
-    description_tags: ["data science", "maths", "very difficult"]
+    video_url: "data_scientist_n3y55p"
   )
 
   Job.create!(
@@ -34,8 +33,7 @@ puts "Adding jobs and favourites to database"
     best_bits: "Speak to people and show them lovely houses",
     worst_bits: "Spend a lot of time indoors",
     qualifications: "None",
-    video_url: "estate_agent_qpsbar",
-    description_tags: ["estate agent", "properties", "housing"]
+    video_url: "estate_agent_qpsbar"
   )
 
   Job.create!(
@@ -45,8 +43,7 @@ puts "Adding jobs and favourites to database"
     best_bits: "Get to break bits",
     worst_bits: "A lot of time spent in front of a screen",
     qualifications: "Do what you love",
-    video_url: "kc2acmjfrjpy52py5izf",
-    description_tags: ["software", "testing", "digital"]
+    video_url: "kc2acmjfrjpy52py5izf"
   )
 
 
