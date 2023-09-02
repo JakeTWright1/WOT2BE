@@ -1,0 +1,29 @@
+.job-profile-card {
+  background-color: #F9E2AF;
+  height: 70vh;
+  border-radius: 8px;
+  color: white;
+}
+
+.profile-container {
+  padding: 25% 20px;
+}
+
+.job-profile-head, .job-salary, .job-profile-infos, .job-tags {
+  background-color: #009FBD;
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px 0;
+  min-width: 90%;
+  margin: 10px auto;
+}
+
+.job-tags {
+  justify-content: space-evenly;
+}
+
+.description-tag {
+  background-color: grey;
+  border-radius: 6px;
+  padding-top: 2px ;
+}
