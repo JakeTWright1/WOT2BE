@@ -1,7 +1,11 @@
 class JobsController < ApplicationController
+  before_action :set_job, only: :show
 
   def index
     @jobs = Job.all
+  end
+
+  def show
   end
 
   def new
@@ -19,6 +23,10 @@ class JobsController < ApplicationController
   private
     def job_params
       params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video_url, :description_tags)
+    end
+    
+    def set_job
+      @job = Job.find(params[:id])
     end
 
 end
