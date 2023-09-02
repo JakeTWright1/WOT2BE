@@ -15,7 +15,9 @@ Job.delete_all
 puts "Adding jobs and favourites to database"
 
 # Create jobs
-
+user_one = User.create!(email: "userone@email.com", password: "123456")
+user_two = User.create!(email: "usertwo@email.com", password: "123456")
+user_three = User.create!(email: "userthree@email.com", password: "123456")
   Job.create!(
     title: "Data Scientist",
     average_salary: 100_000,
@@ -23,7 +25,8 @@ puts "Adding jobs and favourites to database"
     best_bits: "Find out meaningful patterns, things we don't get to see or realize as humans",
     worst_bits: "Lots of numbers",
     qualifications: "A love for math is all you need",
-    video_url: "data_scientist_n3y55p"
+    video_url: "data_scientist_n3y55p",
+    user_id: user_one.id
   )
 
   Job.create!(
@@ -33,7 +36,8 @@ puts "Adding jobs and favourites to database"
     best_bits: "Speak to people and show them lovely houses",
     worst_bits: "Spend a lot of time indoors",
     qualifications: "None",
-    video_url: "estate_agent_qpsbar"
+    video_url: "estate_agent_qpsbar",
+    user_id: user_two.id
   )
 
   Job.create!(
@@ -43,7 +47,8 @@ puts "Adding jobs and favourites to database"
     best_bits: "Get to break bits",
     worst_bits: "A lot of time spent in front of a screen",
     qualifications: "Do what you love",
-    video_url: "kc2acmjfrjpy52py5izf"
+    video_url: "kc2acmjfrjpy52py5izf",
+    user_id: user_three.id
   )
 
 puts "Creating tags"
