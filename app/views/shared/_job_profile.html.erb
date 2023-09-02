@@ -1,0 +1,32 @@
+<div class="profile-container">
+  <div class="job-profile-card p-2 m-2">
+    <div class="job-profile-head">
+      <h1><%= @job.title %></h1>
+    </div>
+    <div class="job-salary m-2">
+        <h4>Average Salary</h4>
+        <p><strong><%= @job.average_salary %>K</strong></p>
+    </div>
+    <div class="job-profile-infos">
+      <h4>Duties</h4>
+      <p><%= @job.duties %></p>
+      <h4>Best Bits</h4>
+      <p><%= @job.best_bits %></p>
+      <h4>Worst Bits</h4>
+      <p><%= @job.worst_bits %></p>
+      <h4>Qualifications Needed</h4>
+      <p><em><%= @job.qualifications %></em></p>
+    </div>
+    <div class="job-tags d-flex">
+      <div class="description-tag">
+        <p>#tech</p>
+      </div>
+      <div class="description-tag">
+        <p>#programming</p>
+      </div>
+      <div class="description-tag">
+        <p>#remote</p>
+      </div>
+    </div>
+  </div>
+</div>
