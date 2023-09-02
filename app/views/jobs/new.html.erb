@@ -1,0 +1,17 @@
+
+<div class= "container">
+
+  <%= simple_form_for @job do |f| %>
+  <%= f.input :title %>
+  <%= f.input :average_salary %>
+  <%= f.input :duties %>
+  <%= f.input :best_bits %>
+  <%= f.input :worst_bits %>
+  <%= f.input :qualifications %>
+  <%= f.input :description_tags %>
+  <%= f.input :video, as: :file %>
+    <p class="text-center"><%= f.submit%></p>
+  <% end %>
+
+    <%= link_to "home page", root_path, class: 'btn btn-primary' %>
+</div>
