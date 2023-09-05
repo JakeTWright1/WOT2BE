@@ -14,7 +14,9 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    @job.user_id = current_user.id
     if @job.save
+
       # redirect_to profile or index page
     else
       render :new, status: :unprocessable_entity
