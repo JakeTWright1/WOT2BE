@@ -8,8 +8,9 @@
   <%= f.input :best_bits %>
   <%= f.input :worst_bits %>
   <%= f.input :qualifications %>
-  <%= f.input :description_tags %>
+  <%= f.association :tags %>
   <%= f.input :video, as: :file %>
+  <%= f.hidden_field :user_id, :value=> "#{current_user.id}"  %>
     <p class="text-center"><%= f.submit%></p>
   <% end %>
 
