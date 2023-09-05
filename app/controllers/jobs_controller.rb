@@ -24,12 +24,12 @@ class JobsController < ApplicationController
   end
 
   private
-    def job_params
-      params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video, :description_tags)
-    end
 
-    def set_job
-      @job = Job.find(params[:id])
-    end
+  def job_params
+    params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video, :description_tags)
+  end
 
+  def set_job
+    @job = Job.find(params[:id])
+  end
 end
