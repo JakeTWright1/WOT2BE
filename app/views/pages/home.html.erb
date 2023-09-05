@@ -1,7 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-
-
-
-<%# <%= cl_video_tag(@job.video.key, controls: true) %> %>
+<div class="container">
+  <div class="inner">
+    <h1 class="app-logo">Wot2Be</h1>
+  </div>
+  <% @jobs.each do |job| %>
+    <div class="video-show outer">
+      <%= cl_video_tag(job.video.key, controls: true,
+      :width => 390,
+      :height => 844,
+      :crop => "fill") %>
+    </div>
+  <% end %>
+</div>
