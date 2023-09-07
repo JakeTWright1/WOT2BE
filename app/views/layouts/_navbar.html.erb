@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <a class="nav-item" <%= 'active' if current_page?(root_path) %>href="/">
+    <i class="fa-solid fa-house"></i>
+  </a>
+  <a class="nav-item"<%= 'active' if current_page?("SEARCH FUNCTION") %>href="/">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </a>
+  <a class="nav-item"<%= 'active' if current_page?("LINK TO USER PROFILE") %>href="/">
+    <i class="fa-solid fa-user"></i>
+  </a>
+  <% if user_signed_in? && current_user.worker == true %>
+    <a class="nav-item"<%= 'active' if current_page?(new_job_path) %>href="/">
+      <i class="fa-regular fa-square-plus"></i>
+    </a>
+  <% end %>
+</nav>
