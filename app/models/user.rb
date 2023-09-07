@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :jobs, through: :favourites
   has_many :favourites
+  has_many :favourites
+  has_many :favourite_jobs, through: :favourites, source: :job
 end
