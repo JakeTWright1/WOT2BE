@@ -6,6 +6,12 @@ class User < ApplicationRecord
 
   has_many :jobs, through: :favourites
   has_many :favourites
-  has_many :favourites
   has_many :favourite_jobs, through: :favourites, source: :job
+
+
+  validates :email, presence: true
+  validates :username, presence: true
+  validates :username, uniqueness: true
+  validates :email, uniqueness: true
+
 end
