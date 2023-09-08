@@ -1,0 +1,15 @@
+.job-infos {
+  z-index: 4;
+  position: fixed;
+  bottom: 10%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  left: 10%;
+}
+
+.job-detail-thumb {
+  color: rgb(227, 225, 225);
+  margin-top: -10px;
+  text-shadow: 1px 1px black;
+}
