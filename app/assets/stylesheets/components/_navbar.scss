@@ -2,13 +2,15 @@ i {
   color: white;
 }
 
-.navbar {
+.navbar-whole {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 3;
+}
+.navbar {
   display: flex;
   justify-content: space-around;
-  z-index: 3;
   background-color: rgba(114, 43, 213, 0.539);
 }

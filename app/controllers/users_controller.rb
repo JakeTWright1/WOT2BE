@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
-  has_many :favourites
-  has_many :favourite_jobs, through: :favourites, source: :job
+
+  def show
+    @user = current_user
+  end
 end
