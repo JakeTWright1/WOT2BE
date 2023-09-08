@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :jobs, through: :favourites
   has_many :favourites
+  has_many :favourite_jobs, through: :favourites, source: :job
 end
