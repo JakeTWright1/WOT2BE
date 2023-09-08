@@ -11,23 +11,23 @@
   </div>
   <nav class="navbar" >
     <a class="nav-item"  <%= 'active' if current_page?(root_path) %>href="/">
-      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-house nav-icon"></i>
     </a>
     <a class="nav-item" data-action="click->navbar#revealSearch" <%= 'active' if current_page?("SEARCH FUNCTION") %>href="/">
-      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-magnifying-glass nav-icon"></i>
     </a>
     <% if user_signed_in? %>
       <a class="nav-item"<%= 'active' if current_page?(user_path(current_user)) %>href="/users/<%= current_user.id%>">
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-user nav-icon"></i>
       </a>
     <% else %>
       <a class="nav-item"<%= 'active' if current_page?(new_user_registration_path) %>href="/users/sign_up">
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-user nav-icon"></i>
       </a>
     <% end %>
     <% if user_signed_in? && current_user.worker == true %>
       <a class="nav-item"<%= 'active' if current_page?(new_job_path) %>href="/jobs/new">
-        <i class="fa-regular fa-square-plus"></i>
+        <i class="fa-regular fa-square-plus nav-icon"></i>
       </a>
     <% end %>
   </nav>
