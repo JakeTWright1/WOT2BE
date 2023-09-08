@@ -3,6 +3,9 @@
 <div class="container">
   <% @jobs.each do |job| %>
     <div class="video-show outer">
+      <%= link_to job_path(job), action:'show' do %>
+        <i class="fa-solid fa-circle-info info-link"></i>
+      <% end %>
       <%= cl_video_tag(job.video.key, controls: true,
       :width => 390,
       :height => 844,
