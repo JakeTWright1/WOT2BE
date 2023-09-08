@@ -6,7 +6,7 @@
       <%= link_to job_path(job), action:'show' do %>
         <i class="fa-solid fa-circle-info info-link"></i>
       <% end %>
-
+      <%# This needs to be replaced with the Cloudinary video player %>
       <%= cl_video_tag(job.video.key, controls: true,
       :width => 390,
       :height => 844,
