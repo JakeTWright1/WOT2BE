@@ -1,5 +1,5 @@
 <div class="current-banner">
-  <div class="reused-banner-inner">
+  <div class="reused-banner-inner p-2">
     <h1>My Favourites:</h1>
     <hr>
     <% if @favourites.empty? %>
@@ -17,10 +17,19 @@
       <hr>
     </div>
   <% else %>
-    <div class="cards-booking">
+    <div>
       <% @favourites.each do |favourite| %>
+      <div class ="job-profile-card d-flex justify-content-between m-2">
+      <div class="job-profile-head d-flex justify-content-between p-2">
+      <div>
         <h3><%= favourite.job.title %></h3>
-         <%= link_to jobs_path(job_id: favourite.job_id) %>
+        </div>
+          <div>
+        <%= link_to "View", job_path(favourite.job), class: 'btn btn-outline-light'  %>
+
+          </div>
+        </div>
+        </div>
       <% end %>
     </div>
   <% end %>

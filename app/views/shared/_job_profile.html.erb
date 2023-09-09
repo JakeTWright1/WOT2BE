@@ -30,10 +30,10 @@
     </div>
   <% if current_user.worker == false %>
     <div class="fav-link">
-      <%= link_to user_favourites_path(@job), action: 'create', class: 'fav-link' do %>
+     <%= link_to user_favourites_path(current_user, job_id: @job.id), data: { turbo: true, turbo_method: :post } do %>
 
           <i class="fa-solid fa-heart"></i>
-          <h3>Favourite this job!</h3>
+
       <% end %>
     </div>
   <% elsif @job.user_id == current_user.id %>
