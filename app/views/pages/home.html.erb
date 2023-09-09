@@ -1,5 +1,6 @@
 <%= render partial: "layouts/logo" %>
 
+
 <div>
   <% @jobs.each do |job| %>
   <div class="video-container">
@@ -22,7 +23,7 @@
         <div class="job-detail-thumb">
           <p><%= job.title %></p>
         </div>
-      </div>
+    </div>
 </div>
   <% end %>
 </div>
@@ -31,3 +32,4 @@
 var demoplayer = cloudinary.videoPlayer('demo-player', { cloud_name: "dnn2gysbs",
  loop: true,} )
 </script>
+
