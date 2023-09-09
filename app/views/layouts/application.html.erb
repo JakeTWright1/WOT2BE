@@ -12,12 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0baa16ec68.js" crossorigin="anonymous"></script>
-    <link href="https://unpkg.com/cloudinary-video-player@1.9.14/dist/cld-video-player.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/cloudinary-video-player@1.9.14/dist/cld-video-player.min.js"
-    type="text/javascript"></script>
+    <%= stylesheet_link_tag "https://unpkg.com/cloudinary-video-player@1.9.9/dist/cld-video-player.light.min.css" %>
+    <%= javascript_include_tag "https://unpkg.com/cloudinary-video-player@1.9.9/dist/cld-video-player.light.min.js" %>
   </head>
   <body>
-<%= render "shared/flashes" %>
+    <%= render "shared/flashes" %>
     <%= render "layouts/navbar" %>
     <%= yield %>
   </body>

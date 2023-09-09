@@ -1,20 +1,21 @@
 <%= render partial: "layouts/logo" %>
 
-<div class="container">
 
+<div>
   <% @jobs.each do |job| %>
-    <div class="video-show outer">
+  <div class="video-container">
+      <video
+      id="demo-player"
+      autoplay
+      muted
+      class="cld-video-player video"
+      data-cld-public-id="<%= job.video.key %>">
+      </video>
+
       <%= link_to job_path(job), action:'show' do %>
         <i class="fa-solid fa-circle-info info-link"></i>
       <% end %>
 
-      <%= cl_video_tag(job.video.key, controls: true,
-      :width => 390,
-      :height => 844,
-      :background => "black",
-      :crop => "fill",
-      :effect=>"gradient_fade:symmetric:1",
-      :autoplay=>"true") %>
       <div class="job-infos">
         <div class="job-user">
           <h5>Uploaded by <%= job.user.username %></h5>
@@ -22,8 +23,13 @@
         <div class="job-detail-thumb">
           <p><%= job.title %></p>
         </div>
-      </div>
     </div>
+</div>
+  <% end %>
+</div>
 
-   <% end %>
- </div>
+<script>
+var demoplayer = cloudinary.videoPlayer('demo-player', { cloud_name: "dnn2gysbs",
+ loop: true,} )
+</script>
+

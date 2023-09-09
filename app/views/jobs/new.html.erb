@@ -10,7 +10,7 @@
   <%= f.input :qualifications %>
   <%= f.association :tags %>
   <%= f.input :video, as: :file %>
-  <%= f.hidden_field :user_id, :value=> "#{current_user.id}"  %>
+  <%= f.hidden_field :user_id, :value=> "#{current_user.id}" %>
     <p class="text-center"><%= f.submit%></p>
   <% end %>
 
