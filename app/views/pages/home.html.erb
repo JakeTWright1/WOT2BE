@@ -1,6 +1,7 @@
 <%= render partial: "layouts/logo" %>
 
 <div class="container">
+
   <% @jobs.each do |job| %>
     <div class="video-show outer">
       <%= link_to job_path(job), action:'show' do %>
@@ -23,5 +24,6 @@
         </div>
       </div>
     </div>
-  <% end %>
-</div>
+
+
+ </div>

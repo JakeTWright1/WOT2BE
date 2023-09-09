@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :jobs, only: [ :new, :create, :show, :create, :edit, :destroy ]
   resources :users, only: [ :show, :edit] do
-    resources :favorites, only: [:create, :destroy]
+    resources :favourites, only: [:create, :destroy, :index ]
   end
 end

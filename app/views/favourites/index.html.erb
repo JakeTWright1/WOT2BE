@@ -1,0 +1,27 @@
+<div class="current-banner">
+  <div class="reused-banner-inner">
+    <h1>My Favourites:</h1>
+    <hr>
+    <% if @favourites.empty? %>
+      <h3>You have no favourites!</h3>
+    <% else %>
+      <h3>You have <%= @favourites.count %> Favourites</h3>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <% if @favourites.empty? %>
+    <div class="text-center">
+      <h2>You don't have any favourites <i class="fa-regular fa-face-frown-open"></i></h2>
+      <hr>
+    </div>
+  <% else %>
+    <div class="cards-booking">
+      <% @favourites.each do |favourite| %>
+        <h3><%= favourite.job.title %></h3>
+         <%= link_to jobs_path(job_id: favourite.job_id) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
