@@ -1,37 +1,28 @@
+<%= render partial: "layouts/logo" %>
+
 <div class="container">
 
-  <div class="inner">
-    <h1 class="app-logo">Wot2Be</h1>
-  </div>
-
-
+  <% @jobs.each do |job| %>
     <div class="video-show outer">
-      <% @jobs.each do |job| %>
-
-        <%= cl_video_tag(job.video.key, controls: true,
-        :width => 390,
-        :height => 844,
-        :crop => "fill") %>
-
-  <div style="z-index:1;">
-
-
-
-
-
-  <% if current_user && !current_user.favourites.exists?(job_id: job.id) %>
-            <%= link_to user_favourites_path(current_user, job_id: job.id), data: { turbo: true, turbo_method: :post } do %>
-              <i class="far fa-heart favourite-icon"></i>
-            <% end %>
-          <% else %>
-            <%= link_to user_favourites_path(current_user, job_id: job.id), data: { turbo: true, turbo_method: :post } do %>
-              <i class="fas fa-heart favourite-icon"></i>
-            <% end %>
-          <% end %>
-
-  </div>
-
+      <%= link_to job_path(job), action:'show' do %>
+        <i class="fa-solid fa-circle-info info-link"></i>
       <% end %>
+
+      <%= cl_video_tag(job.video.key, controls: true,
+      :width => 390,
+      :height => 844,
+      :background => "black",
+      :crop => "fill",
+      :effect=>"gradient_fade:symmetric:1",
+      :autoplay=>"true") %>
+      <div class="job-infos">
+        <div class="job-user">
+          <h5>Uploaded by <%= job.user.username %></h5>
+        </div>
+        <div class="job-detail-thumb">
+          <p><%= job.title %></p>
+        </div>
+      </div>
     </div>
 
 

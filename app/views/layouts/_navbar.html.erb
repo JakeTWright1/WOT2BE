@@ -1,16 +1,34 @@
-<nav class="navbar">
-  <a class="nav-item" <%= 'active' if current_page?(root_path) %>href="/">
-    <i class="fa-solid fa-house"></i>
-  </a>
-  <a class="nav-item"<%= 'active' if current_page?("SEARCH FUNCTION") %>href="/">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </a>
-  <a class="nav-item"<%= 'active' if current_page?("LINK TO USER PROFILE") %>href="/">
-    <i class="fa-solid fa-user"></i>
-  </a>
-  <% if user_signed_in? && current_user.worker == true %>
-    <a class="nav-item"<%= 'active' if current_page?(new_job_path) %>href="/">
-      <i class="fa-regular fa-square-plus"></i>
+<div class="navbar-whole" data-controller="navbar">
+  <div class="search-bar d-none" data-navbar-target="search">
+    <%= form_with url: jobs_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for jobs"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <nav class="navbar" >
+    <a class="nav-item"  <%= 'active' if current_page?(root_path) %>href="/">
+      <i class="fa-solid fa-house nav-icon"></i>
     </a>
-  <% end %>
-</nav>
+    <a class="nav-item" data-action="click->navbar#revealSearch" <%= 'active' if current_page?("SEARCH FUNCTION") %>href="/">
+      <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+    </a>
+    <% if user_signed_in? %>
+      <a class="nav-item"<%= 'active' if current_page?(user_path(current_user)) %>href="/users/<%= current_user.id%>">
+        <i class="fa-solid fa-user nav-icon"></i>
+      </a>
+    <% else %>
+      <a class="nav-item"<%= 'active' if current_page?(new_user_registration_path) %>href="/users/sign_up">
+        <i class="fa-solid fa-user nav-icon"></i>
+      </a>
+    <% end %>
+    <% if user_signed_in? && current_user.worker == true %>
+      <a class="nav-item"<%= 'active' if current_page?(new_job_path) %>href="/jobs/new">
+        <i class="fa-regular fa-square-plus nav-icon"></i>
+      </a>
+    <% end %>
+  </nav>
+</div>

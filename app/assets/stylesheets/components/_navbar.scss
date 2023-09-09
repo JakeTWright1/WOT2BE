@@ -1,14 +1,28 @@
-i {
+.nav-icon {
   color: white;
+  font-size: 25px;
 }
 
-.navbar {
+.navbar-whole {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 3;
+}
+.navbar {
+  margin: 10px auto;
   display: flex;
   justify-content: space-around;
-  z-index: 3;
-  background-color: rgba(114, 43, 213, 0.539);
+  background-color: rgba(114, 43, 213, 0.368);
+  width: 90%;
+  border-radius: 30%;
+  height: 60px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+}
+
+.active {
+  background-color: black;
 }
