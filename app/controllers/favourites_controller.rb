@@ -5,8 +5,13 @@ class FavouritesController < ApplicationController
 
   def create
     @job = Job.find(params[:job_id])
-    current_user.favourite_jobs << @job
-    redirect_to jobs_path, notice: "Job favourited successfully."
+
+    if current_user.favourite_jobs.include?(@job)
+      redirect_to user_favourites_path, notice: "Job already favourited."
+    else
+      current_user.favourite_jobs << @job
+      redirect_to user_favourites_path, notice: "Job favourited successfully."
+    end
   end
 
   private
