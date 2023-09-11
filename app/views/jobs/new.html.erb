@@ -8,7 +8,7 @@
   <%= f.input :best_bits %>
   <%= f.input :worst_bits %>
   <%= f.input :qualifications %>
-  <%= f.association :tags %>
+  <%= f.input :industry_id, collection: @industries, label_method: :name, value_method: :id,label: "Select Industry", include_blank: false, selected: @job.industry_id %>
   <%= f.input :video, as: :file %>
   <%= f.hidden_field :user_id, :value=> "#{current_user.id}" %>
     <p class="text-center"><%= f.submit%></p>

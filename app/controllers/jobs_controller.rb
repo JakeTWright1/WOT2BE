@@ -10,7 +10,7 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
-    @tags = Tag.all
+    @industries = Industry.all
   end
 
   def create
@@ -26,7 +26,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video, :description_tags)
+    params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video, :industry_id)
   end
 
   def set_job
