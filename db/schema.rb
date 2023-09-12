@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_12_182003) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_12_183201) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,15 +58,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_12_182003) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobindustries", force: :cascade do |t|
-    t.bigint "industry_id", null: false
-    t.bigint "job_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["industry_id"], name: "index_jobindustries_on_industry_id"
-    t.index ["job_id"], name: "index_jobindustries_on_job_id"
-  end
-
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.integer "average_salary"
@@ -111,8 +102,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_12_182003) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "favourites", "jobs"
   add_foreign_key "favourites", "users"
-  add_foreign_key "jobindustries", "industries"
-  add_foreign_key "jobindustries", "jobs"
   add_foreign_key "jobs", "industries"
   add_foreign_key "jobs", "users"
 end
