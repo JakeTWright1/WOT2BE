@@ -2,6 +2,41 @@
   <div class="title-card">
     <h1><span class="job-title"><%= @job.title %></span></h1>
   </div>
+  <div class="job-details-container">
+    <div class="job-details-card">
+     <h1>Industry:</h1>
+     <h3><%= @job.industry.name %></h3>
+    </div>
+    <hr>
+    <div class="job-details-card">
+      <h1>Average Salary</h1>
+      <h1><%= @job.average_salary %></h1>
+    </div>
+    <hr>
+
+    <div class="job-details-card">
+      <h2>Main Tasks:</h2>
+      <h3><%= @job.duties %></h3>
+    </div>
+    <hr>
+    <div class="job-details-card">
+      <h2>Best Bits:</h2>
+      <h3><%= @job.best_bits %></h3>
+    </div>
+    <hr>
+    <div class="job-details-card">
+    <h2>Worst Bits:</h2>
+    <h3><%= @job.worst_bits %></h3>
+    </div>
+    <hr>
+    <div class="job-details-card">
+      <h2>Qualifications needed:</h2>
+      <h3><%= @job.qualifications %></h3>
+    </div>
+  </div>
+  <h1>fgdsgfg</h1>
+  <hr>
+  <h1>gsdhfgsdf</h1>
 </div>
 
 
