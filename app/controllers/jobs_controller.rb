@@ -6,6 +6,7 @@ class JobsController < ApplicationController
   end
 
   def show
+    @industry = Industry.find_by_id(params[:job_id])
   end
 
   def new

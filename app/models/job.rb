@@ -3,5 +3,5 @@ class Job < ApplicationRecord
   has_one_attached :video
   belongs_to :user
   has_many :users, through: :favourites
-  has_many :industries, through: :jobindustry
+  belongs_to :industry
 end

@@ -1,3 +1,3 @@
 class Industry < ApplicationRecord
-  has_many :jobs, through: :jobindustry
+  has_many :jobs
 end
