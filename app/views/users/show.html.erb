@@ -3,5 +3,12 @@
     <div class="user-profile-head">
       <h1>Profile: <%= current_user.username %></h1>
     </div>
+
+    <%= button_to "Logout", destroy_user_session_path, class: "btn btn-secondary btn-lg", method: :delete %>
+
+ <% if user_signed_in? && current_user.worker == false %>
+      <%= button_to "Favourites", user_favourites_path(current_user), class: "btn btn-secondary btn-lg" %>
+    <% end %>
+
   </div>
 </div>
