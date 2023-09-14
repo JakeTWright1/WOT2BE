@@ -4,39 +4,43 @@
   </div>
   <div class="job-details-container">
     <div class="job-details-card">
-     <h1>Industry:</h1>
-     <h3><%= @job.industry.name %></h3>
+     <h3>Industry:</h3>
+     <h1><%= @job.industry.name %></h1>
     </div>
     <hr>
     <div class="job-details-card">
-      <h1>Average Salary</h1>
-      <h1><%= @job.average_salary %></h1>
+      <h3>Average Salary</h3>
+      <h1>£<%= @job.average_salary %></h1>
     </div>
     <hr>
 
     <div class="job-details-card">
-      <h2>Main Tasks:</h2>
-      <h3><%= @job.duties %></h3>
+      <h3>Main Tasks:</h3>
+      <h1><%= @job.duties %></h1>
     </div>
     <hr>
     <div class="job-details-card">
-      <h2>Best Bits:</h2>
-      <h3><%= @job.best_bits %></h3>
+      <h3>Best Bits:</h3>
+      <h1><%= @job.best_bits %></h1>
     </div>
     <hr>
     <div class="job-details-card">
-    <h2>Worst Bits:</h2>
-    <h3><%= @job.worst_bits %></h3>
+    <h3>Worst Bits:</h3>
+    <h1><%= @job.worst_bits %></h1>
     </div>
     <hr>
     <div class="job-details-card">
-      <h2>Qualifications needed:</h2>
-      <h3><%= @job.qualifications %></h3>
+      <h3>Qualifications needed:</h3>
+      <h1><%= @job.qualifications %></h1>
     </div>
+    <hr>
+    <div class="job-details-card job-favorite">
+      <i class="fa-regular fa-heart heart-fav-link"></i>
+      <h1>Add to favourites!</h1>
+    </div>
+    <hr>
   </div>
-  <h1>fgdsgfg</h1>
-  <hr>
-  <h1>gsdhfgsdf</h1>
+
 </div>
 
 

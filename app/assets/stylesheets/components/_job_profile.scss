@@ -32,12 +32,31 @@
   border-radius: 8px;
   width: 90%;
   margin: 0 auto;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 4px 4px 5px black;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
 }
 
 .job-profile-container {
-  background-color: aqua;
+  background-color: #009fbd;
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100vw;
   text-align: center;
+}
+
+.job-favorite {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f9e2af;
+  color: black;
+
+}
+
+.heart-fav-link {
+  font-size: 35px;
 }
