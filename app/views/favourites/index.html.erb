@@ -1,36 +1,48 @@
+  <div class="container">
+
+  <div class="user-profile-card p-2 my-4">
+
+ <div class="user-profile-head d-flex justify-content-between">
+      <h1><%= current_user.username %></h1>  <%= button_to "Logout", destroy_user_session_path, class: "btn btn-secondary btn-sm", method: :delete %>
+    </div>
+
+
 <div class="current-banner">
-  <div class="reused-banner-inner p-2">
-    <h1>My Favourites:</h1>
+  <div class="reused-banner-inner p-2 user-profile-head">
+    <h1>My Favourite Jobs  💼  </h1>
     <hr>
     <% if @favourites.empty? %>
-      <h3>You have no favourites!</h3>
+      <h3>You have no favourites yet!</h3>
     <% else %>
-      <h3>You have <%= @favourites.count %> Favourites</h3>
+      <h3>You have <%= @favourites.count %> Favourite(s)</h3>
     <% end %>
   </div>
 </div>
 
-<div class="container">
-  <% if @favourites.empty? %>
-    <div class="text-center">
-      <h2>You don't have any favourites <i class="fa-regular fa-face-frown-open"></i></h2>
-      <hr>
-    </div>
-  <% else %>
+
+
     <div>
       <% @favourites.each do |favourite| %>
-      <div class ="job-profile-card d-flex justify-content-between m-2">
+      <div class ="job-profile-card d-flex justify-content-between m-2 row">
       <div class="job-profile-head d-flex justify-content-between p-2">
       <div>
         <h3><%= favourite.job.title %></h3>
+
         </div>
           <div>
-        <%= link_to "View", job_path(favourite.job), class: 'btn btn-outline-light'  %>
 
+          <div class="btn-group btn-group-sm" role="group" aria-label="Tools for favourites">
+
+        <%= link_to "View", job_path(favourite.job), class: 'btn btn-outline-light'  %>
+         <%= button_to "❌", user_favourite_path(current_user, favourite), method: :delete, class: 'btn btn-outline-light' %>
+</div>
           </div>
         </div>
         </div>
       <% end %>
+
     </div>
-  <% end %>
+
+  </div>
+
 </div>
