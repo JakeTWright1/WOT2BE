@@ -34,7 +34,7 @@
       <h1><%= @job.qualifications %></h1>
     </div>
     <hr>
-    <%= button_to user_favourites_path(user_id: current_user.id, job_id: @job.id) do %>
+    <%= button_to user_favourites_path(user_id: current_user.id, job_id: @job.id), class: 'remove-style' do %>
     <div class="job-details-card job-favorite">
         <i class="fa-regular fa-heart heart-fav-link"></i>
         <h1>Add to favourites!</h1>
