@@ -1,32 +1,32 @@
 <%= render partial: "layouts/logo" %>
 
-
+<div class="video-container">
   <% @jobs.each do |job| %>
-<div>
-  <div class="video-container">
-      <video
-      id="demo-player-<%= job.id %>"
-      autoplay
-      muted
-      class="cld-video-player video"
-      data-cld-public-id="<%= job.video.key %>">
-      </video>
+    <div class="video-div">
+        <video
+        id="demo-player-<%= job.id %>"
+        autoplay
+        muted
+        class="cld-video-player video"
+        data-cld-public-id="<%= job.video.key %>">
+        </video>
 
-      <%= link_to job_path(job), action:'show' do %>
-        <i class="fa-solid fa-circle-info info-link"></i>
-      <% end %>
+        <%= link_to job_path(job), action:'show' do %>
+          <i class="fa-solid fa-circle-info info-link"></i>
+        <% end %>
 
-      <div class="job-infos">
-        <div class="job-user">
-          <h5>Uploaded by <%= job.user.username %></h5>
-        </div>
-        <div class="job-detail-thumb">
-          <p><%= job.title %></p>
+        <div class="job-infos">
+          <div class="job-user">
+            <h5>Uploaded by <%= job.user.username %></h5>
+          </div>
+          <div class="job-detail-thumb">
+            <p><%= job.title %></p>
+          </div>
         </div>
     </div>
-</div>
-</div>
   <% end %>
+</div>
+
 <% @jobs.each do |job| %>
 <script>
 var demoplayer = cloudinary.videoPlayer('demo-player-<%= job.id  %>', { cloud_name: "dnn2gysbs",
