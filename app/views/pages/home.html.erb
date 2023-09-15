@@ -1,8 +1,7 @@
 <%= render partial: "layouts/logo" %>
 
-<%# <div class="video-container"> %>
+<div class="video-container">
   <% @jobs.each do |job| %>
-  <div>
     <div class="video-div">
         <video
         id="demo-player-<%= job.id %>"
@@ -24,10 +23,9 @@
             <p><%= job.title %></p>
           </div>
         </div>
-  <% end %>
     </div>
-  </div>
-<%# </div> %>
+  <% end %>
+</div>
 
 <% @jobs.each do |job| %>
 <script>
