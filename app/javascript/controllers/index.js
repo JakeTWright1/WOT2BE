@@ -5,3 +5,6 @@ application.register("hello", HelloController);
 
 import NavbarController from "./navbar_controller";
 application.register("hello", NavbarController);
+
+import { initSortable } from "./init_sortable";
+initSortable();
