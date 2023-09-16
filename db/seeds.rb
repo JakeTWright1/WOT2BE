@@ -1,5 +1,5 @@
 puts "Clearing the database"
-# Favourite.delete_all
+Favourite.delete_all
 Job.delete_all
 # User.delete_all
 
@@ -17,7 +17,19 @@ Job.delete_all
 # Create jobs
 
 puts "Creating tags"
+Tag.create!(name: "english")
+Tag.create!(name: "chemistry")
+Tag.create!(name: "mathematics")
+Tag.create!(name: "biology")
+Tag.create!(name: "physics")
+Tag.create!(name: "languages")
+Tag.create!(name: "history")
+Tag.create!(name: "geography")
+Tag.create!(name: "media-studies")
+Tag.create!(name: "art-and-design")
+Tag.create!(name: "IT")
 
+puts "Creating Industries"
 Industry.create!(name: "Information Technology (IT)", image_url: "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18383.jpg?w=2000")
 Industry.create!(name: "Healthcare", image_url: "https://assets.aboutamazon.com/21/d3/171c031b4871a367060f2b974a59/health-hero-1.jpg")
 Industry.create!(name: "Education", image_url: "https://nces.ed.gov/programs/coe/images/flagship/coe-144ppi.png")
