@@ -12,3 +12,7 @@ application.register("info-on-scroll", InfoOnScrollController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import { initSortable } from "./init_sortable";
+initSortable();
+
