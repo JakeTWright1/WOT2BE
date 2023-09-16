@@ -2,9 +2,13 @@ import { Controller } from "@hotwired/stimulus";
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["search"];
+  // static targets = ["search"];
+  connect() {
+    console.log("hello");
+  }
 
   revealSearch() {
-    this.searchTarget.classList.remove("d-none");
+    console.log("hello");
+    // this.searchTarget.classList.toggle("d-none");
   }
 }
