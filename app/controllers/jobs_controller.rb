@@ -12,6 +12,7 @@ class JobsController < ApplicationController
   def new
     @job = Job.new
     @industries = Industry.all
+    @tags = Tag.all
   end
 
   def create
