@@ -1,3 +1,5 @@
+<%= render partial: "layouts/logo" %>
+
 <div class="job-profile-container">
   <div class="profile-show">
     <div class="title-card">
@@ -7,14 +9,13 @@
       <div class="profile-nav-btn active" id="overview-btn">
         <button><h3>Overview</h3></button>
       </div>
-      <div class="profile-nav-btn active" id="pros-btn">
+      <div class="profile-nav-btn " id="pros-btn">
         <h3>Pros & Cons</h3>
       </div>
-      <div class="profile-nav-btn active" id="how-btn">
+      <div class="profile-nav-btn " id="how-btn">
         <h3>How2Be</h3>
       </div>
     </div>
-    <br>
     <div class="job-details-card" id="overview">
       <h3>Industry</h3>
       <h4><%= @job.industry.name %></h4>
@@ -25,14 +26,14 @@
       <h3>Main Duties</h3>
       <h4><%= @job.duties %></h4>
     </div>
-    <div class="job-details-card" id="pros-and-cons">
+    <div class="job-details-card d-none" id="pros-and-cons">
       <h3>Best Bits</h3>
       <h4><%= @job.best_bits %></h4>
       <br>
       <h3>Worst Bits</h3>
       <h4><%= @job.worst_bits %></h4>
     </div>
-    <div class="job-details-card" id="how-to-be">
+    <div class="job-details-card d-none" id="how-to-be">
     <h3>Required Qualifications</h3>
     <h4><%= @job.qualifications %></h4>
     <br>
@@ -44,15 +45,14 @@
       </div>
     </div>
 
-
-      <hr>
       <%= button_to user_favourites_path(user_id: current_user.id, job_id: @job.id), class: 'remove-style' do %>
       <div class="job-details-card job-favorite">
           <i class="fa-regular fa-heart heart-fav-link"></i>
           <h1>Add to favourites!</h1>
       </div>
       <% end %>
-      <hr>
+      <br>
+      <br>
     </div>
   </div>
 </div>
