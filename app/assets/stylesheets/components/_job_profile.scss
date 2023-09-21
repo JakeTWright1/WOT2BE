@@ -106,7 +106,7 @@ button {
   background: none;
 	color: inherit;
 	border: none;
-	padding: 0;
+	// padding: 0;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -119,8 +119,8 @@ button {
 }
 
 .subject-link {
-  color: rgb(115, 29, 234);
-  background-color: rgb(207, 206, 206);
+  color: white;
+  background-color: rgb(125, 46, 236);
   border-radius: 8px;
-  padding: 4px;
+  padding: 4px 8px;
 }
