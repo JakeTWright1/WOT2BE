@@ -1,48 +1,55 @@
 <div class="job-profile-container">
-  <div class="title-card">
-    <h1><span class="job-title"><%= @job.title %></span></h1>
-  </div>
-  <div class="job-details-container">
-    <div class="job-details-card">
-     <h3>Industry:</h3>
-     <h1><%= @job.industry.name %></h1>
+  <div class="profile-show">
+    <div class="title-card">
+      <h1><span class="job-title"><%= @job.title %></span></h1>
     </div>
-    <hr>
-    <div class="job-details-card">
+    <div class="job-profile-nav">
+      <div class="profile-nav-btn active" id="overview-btn">
+        <button><h3>Overview</h3></button>
+      </div>
+      <div class="profile-nav-btn active" id="pros-btn">
+        <h3>Pros & Cons</h3>
+      </div>
+      <div class="profile-nav-btn active" id="how-btn">
+        <h3>How2Be</h3>
+      </div>
+    </div>
+    <br>
+    <div class="job-details-card" id="overview">
+      <h3>Industry</h3>
+      <h4><%= @job.industry.name %></h4>
+      <br>
       <h3>Average Salary</h3>
-      <h1>£<%= @job.average_salary %></h1>
+      <h4>£<%= @job.average_salary %></h4>
+      <br>
+      <h3>Main Duties</h3>
+      <h4><%= @job.duties %></h4>
     </div>
-    <hr>
+    <div class="job-details-card" id="pros-and-cons">
+      <h3>Best Bits</h3>
+      <h4><%= @job.best_bits %></h4>
+      <br>
+      <h3>Worst Bits</h3>
+      <h4><%= @job.worst_bits %></h4>
+    </div>
+    <div class="job-details-card" id="how-to-be">
+    <h3>Required Qualifications</h3>
+    <h4><%= @job.qualifications %></h4>
+    <br>
+    <h3>Recommended Subjects</h3>
+    </div>
 
-    <div class="job-details-card">
-      <h3>Main Tasks:</h3>
-      <h1><%= @job.duties %></h1>
+
+      <hr>
+      <%= button_to user_favourites_path(user_id: current_user.id, job_id: @job.id), class: 'remove-style' do %>
+      <div class="job-details-card job-favorite">
+          <i class="fa-regular fa-heart heart-fav-link"></i>
+          <h1>Add to favourites!</h1>
+      </div>
+      <% end %>
+      <hr>
     </div>
-    <hr>
-    <div class="job-details-card">
-      <h3>Best Bits:</h3>
-      <h1><%= @job.best_bits %></h1>
-    </div>
-    <hr>
-    <div class="job-details-card">
-    <h3>Worst Bits:</h3>
-    <h1><%= @job.worst_bits %></h1>
-    </div>
-    <hr>
-    <div class="job-details-card">
-      <h3>Qualifications needed:</h3>
-      <h1><%= @job.qualifications %></h1>
-    </div>
-    <hr>
-    <%= button_to user_favourites_path(user_id: current_user.id, job_id: @job.id), class: 'remove-style' do %>
-    <div class="job-details-card job-favorite">
-        <i class="fa-regular fa-heart heart-fav-link"></i>
-        <h1>Add to favourites!</h1>
-    </div>
-    <% end %>
-    <hr>
   </div>
-
 </div>
 
 
@@ -51,3 +58,14 @@
   background-image: url(<%= @job.industry.image_url %>)
 }
 </style>
+
+<script>
+const overviewButton = getElementById("overview-btn")
+const prosButton = getElementById("pros-btn")
+const howButton = getElementById("how-btn")
+const overviewCard = getElementById("overview")
+const prosCard = getElementById("pros-and-cons")
+const howCard = getElementById("how-to-be")
+overviewButton.addEventListener( 'click', () =>
+  overviewButton.classList.toggle('active'))
+</script>
