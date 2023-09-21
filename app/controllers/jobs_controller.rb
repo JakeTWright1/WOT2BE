@@ -2,7 +2,13 @@ class JobsController < ApplicationController
   before_action :set_job, only: :show
 
   def index
-    @jobs = Job.all
+     if params[:query].present?
+      industry_name = params[:query]
+      found_jobs = Job.joins(:industry).where("LOWER(industries.name) LIKE ?", "%#{industry_name.downcase}%")
+      @jobs = found_jobs.empty? ? Job.all : found_jobs
+        else
+      @jobs = Job.all
+        end
   end
 
   def show
