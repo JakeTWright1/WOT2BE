@@ -9,10 +9,10 @@
       <div class="profile-nav-btn active" id="overview-btn">
         <button><h3>Overview</h3></button>
       </div>
-      <div class="profile-nav-btn " id="pros-btn">
+      <div class="profile-nav-btn active" id="pros-btn">
         <h3>Pros & Cons</h3>
       </div>
-      <div class="profile-nav-btn " id="how-btn">
+      <div class="profile-nav-btn active" id="how-btn">
         <h3>How2Be</h3>
       </div>
     </div>
@@ -26,14 +26,14 @@
       <h3>Main Duties</h3>
       <h4><%= @job.duties %></h4>
     </div>
-    <div class="job-details-card d-none" id="pros-and-cons">
+    <div class="job-details-card " id="pros-and-cons">
       <h3>Best Bits</h3>
       <h4><%= @job.best_bits %></h4>
       <br>
       <h3>Worst Bits</h3>
       <h4><%= @job.worst_bits %></h4>
     </div>
-    <div class="job-details-card d-none" id="how-to-be">
+    <div class="job-details-card " id="how-to-be">
     <h3>Required Qualifications</h3>
     <h4><%= @job.qualifications %></h4>
     <br>
