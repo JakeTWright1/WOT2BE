@@ -17,17 +17,17 @@ Job.delete_all
 # Create jobs
 
 puts "Creating tags"
-Tag.create!(name: "english")
-Tag.create!(name: "chemistry")
-Tag.create!(name: "mathematics")
-Tag.create!(name: "biology")
-Tag.create!(name: "physics")
-Tag.create!(name: "languages")
-Tag.create!(name: "history")
-Tag.create!(name: "geography")
-Tag.create!(name: "media-studies")
-Tag.create!(name: "art-and-design")
-Tag.create!(name: "IT")
+Subject.create!(name: "english")
+Subject.create!(name: "chemistry")
+Subject.create!(name: "mathematics")
+Subject.create!(name: "biology")
+Subject.create!(name: "physics")
+Subject.create!(name: "languages")
+Subject.create!(name: "history")
+Subject.create!(name: "geography")
+Subject.create!(name: "media-studies")
+Subject.create!(name: "art-and-design")
+Subject.create!(name: "IT")
 
 puts "Creating Industries"
 Industry.create!(name: "Information Technology (IT)", image_url: "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18383.jpg?w=2000")
