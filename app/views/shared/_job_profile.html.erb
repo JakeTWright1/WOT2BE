@@ -37,6 +37,11 @@
     <h4><%= @job.qualifications %></h4>
     <br>
     <h3>Recommended Subjects</h3>
+      <div class="job-subjects">
+      <% @job.subjects.each do |subject| %>
+        <button class="subject-link">#<%= subject.name %></button>
+      <% end %>
+      </div>
     </div>
 
 

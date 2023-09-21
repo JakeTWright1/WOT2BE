@@ -110,3 +110,16 @@ button {
 	cursor: pointer;
 	outline: inherit;
 }
+
+.job-subjects {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.subject-link {
+  color: rgb(115, 29, 234);
+  background-color: rgb(207, 206, 206);
+  border-radius: 8px;
+  padding: 4px;
+}
