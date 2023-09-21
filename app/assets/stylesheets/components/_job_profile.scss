@@ -6,42 +6,27 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+body, h3, h4 {
+  font-family: "Red Hat Display", sans-serif, !important;
+}
 
 .job-title {
   text-shadow: 1px 1px black;
-  background-color: rgba(132, 51, 203, 0.623);
-  padding: 2px 2px;
+  padding: 5px 5px;
   margin-top: 20px;
-  border-radius: 16px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
   color: white;
 }
 
 .title-card {
-  justify-content: center;
-  height: 250px;
-  display: flex;
-  align-items: center;
-}
-
-.job-details-card {
-  text-align: center;
-  background-color: rgb(178, 13, 178);
-  border-radius: 8px;
-  width: 90%;
-  margin: 0 auto;
-  color: white;
-  padding: 10px 0;
-  box-shadow: 4px 4px 5px black;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
+  // position: absolute;
+  // height: 250px;
+  // top: 50px;
+  text-align: left;
+  margin-left: 8px;
 }
 
 .job-profile-container {
-  background-color: #009fbd;
+  background-color: rgb(31, 30, 30);
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100vw;
@@ -55,8 +40,8 @@
   background-color: #f9e2af;
   color: black;
   text-decoration: none;
-
 }
+
 
 .heart-fav-link {
   font-size: 35px;
@@ -70,4 +55,71 @@
 .remove-style {
   background: none;
   border: none;
+}
+
+.job-details-card {
+  background-color: rgb(67, 67, 67);
+  width: 95vw;
+  border-radius: 16px;
+  padding: 8px 10px;
+  margin: 5px auto;
+  color: white;
+  text-align: left;
+}
+
+.job-details-card > h3 {
+  font-weight: bold;
+}
+
+.job-details-card > h4 {
+  font-weight: lighter;
+}
+
+.profile-show {
+  margin-top: 200px;
+}
+.job-profile-nav {
+  display: flex;
+  width: 95vw;
+  justify-content: space-evenly;
+  background-color: rgb(67, 67, 67);
+  border-radius: 16px;
+  padding: 8px 2px;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.profile-nav-btn {
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.active {
+  background-color: white !important;
+  color:  rgb(67, 67, 67) !important;
+  border-radius: 16px;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.job-subjects {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.subject-link {
+  color: rgb(115, 29, 234);
+  background-color: rgb(207, 206, 206);
+  border-radius: 8px;
+  padding: 4px;
 }
