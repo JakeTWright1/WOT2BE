@@ -1,6 +1,7 @@
+<%= render partial: "layouts/logo" %>
 
-<div class="container">
-  <h1 class="mt-5 mb-4">TikTok-Style Index Page</h1>
+<div class="results-container">
+  <h3 style="color: white">Showing results for: <%= params[:query] %></h3>
   <div class="row">
     <% @jobs.each do |job| %>
       <div class="col-md-6 col-sm-12">
