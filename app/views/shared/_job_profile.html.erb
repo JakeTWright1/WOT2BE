@@ -45,12 +45,19 @@
       </div>
     </div>
 
+    <% if current_user.favourites.exists?(job_id: @job.id) %>
+      <div class="job-details-card job-favorite">
+        <i class="fa-solid fa-heart heart-fav-link"></i>
+        <h1>Job Saved to favourites!</h1>
+      </div>
+    <% else %>
       <%= button_to user_favourites_path(user_id: current_user.id, job_id: @job.id), class: 'remove-style' do %>
       <div class="job-details-card job-favorite">
           <i class="fa-regular fa-heart heart-fav-link"></i>
           <h1>Add to favourites!</h1>
       </div>
       <% end %>
+    <% end %>
       <br>
       <br>
     </div>
