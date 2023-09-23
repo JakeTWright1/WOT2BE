@@ -1,14 +1,32 @@
 .user-profile-card {
-  background-color: #f9e2af;
   height: 90vh;
   border-radius: 8px;
   color: white;
 }
 
-.user-profile-head, .job-profile-head {
-  background-color: #009fbd;
+.user-profile-head,
+.job-profile-head {
   border-radius: 8px;
   padding: 5px 5px;
   min-width: 90%;
   margin: 10px auto;
+}
+
+.user-profile-fav,
+.job-profile-fav {
+  background-color: #434343;
+  border-radius: 8px;
+  padding: 5px 5px;
+  min-width: 90%;
+  margin: 10px auto;
+  align-items: center;
+}
+
+user-profile-fav h3,
+.job-profile-fav h3 {
+  font-size: 18px;
+}
+
+.user-profile-bg {
+  background-image: url("bg-img-fav.jpg");
 }
