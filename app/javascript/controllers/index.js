@@ -2,17 +2,16 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application"
+import { application } from "controllers/application";
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import HelloController from "controllers/hello_controller";
+application.register("hello", HelloController);
 
-import InfoOnScrollController from "./info_on_scroll_controller"
-application.register("info-on-scroll", InfoOnScrollController)
+import InfoOnScrollController from "controllers/info_on_scroll_controller";
+application.register("info-on-scroll", InfoOnScrollController);
 
-import NavbarController from "./navbar_controller"
-application.register("navbar", NavbarController)
+import NavbarController from "controllers/navbar_controller";
+application.register("navbar", NavbarController);
 
-import { initSortable } from "./init_sortable";
+import { initSortable } from "controllers/init_sortable";
 initSortable();
-
