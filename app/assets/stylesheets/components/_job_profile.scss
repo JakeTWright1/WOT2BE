@@ -41,6 +41,8 @@ body, h3, h4 {
   background-color: #f9e2af;
   color: black;
   text-decoration: none;
+  padding-top: 5px;
+  align-items: center;
 }
 
 
@@ -62,7 +64,7 @@ body, h3, h4 {
   background-color: rgb(67, 67, 67);
   width: 95vw;
   border-radius: 16px;
-  padding: 8px 10px;
+  padding: 10px 10px;
   margin: 5px auto;
   color: white;
   text-align: left;
@@ -81,11 +83,11 @@ body, h3, h4 {
 }
 .job-profile-nav {
   display: flex;
+  height: 40px;
   width: 95vw;
   justify-content: space-evenly;
   background-color: rgb(67, 67, 67);
   border-radius: 16px;
-  padding: 8px 2px;
   align-items: center;
   margin: 2px auto;
 }
@@ -93,13 +95,16 @@ body, h3, h4 {
 .profile-nav-btn {
   color: white;
   height: 100%;
-  width: 100%;
+  width: 95vw;
+  align-items: stretch;
+  padding-top: 5px;
 }
 
 .active {
   background-color: white !important;
   color:  rgb(67, 67, 67) !important;
   border-radius: 16px;
+  height: 100% !important;
 }
 
 button {

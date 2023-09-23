@@ -24,7 +24,9 @@ class JobsController < ApplicationController
   end
 
   def show
-    @industry = Industry.find_by_id(params[:job_id])
+    # raise
+    # @industry = Industry.find_by_id(params[:id])
+    @favourite = Favourite.find_by(user: current_user, job_id: params[:id])
   end
 
   def new
@@ -46,7 +48,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video, :industry_id, subject_ids: [])
+    params.require(:job).permit(:title, :average_salary, :duties, :best_bits, :worst_bits, :qualifications, :video, :degree, :industry_id, subject_ids: [])
   end
 
   def set_job

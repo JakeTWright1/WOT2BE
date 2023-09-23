@@ -5,23 +5,24 @@ class FavouritesController < ApplicationController
 
   def create
     @job = Job.find(params[:job_id])
-
     if current_user.favourite_jobs.include?(@job)
       redirect_to user_favourites_path, notice: "Job already favourited."
     else
-      current_user.favourite_jobs << @job
+      favourite = Favourite.new(user: current_user, job: @job)
+      favourite.save!
+      redirect_to job_path(@job)
     end
   end
 
   def destroy
     @favourite = Favourite.find(params[:id])
     @favourite.destroy
-    redirect_to user_favourites_path
+    redirect_back_or_to "/"
   end
 
   private
 
   def favourite_params
-    params.require(:favourite).permit(:user_id, :job_id)
+    params.require(:favourite).permit(:user_id, :job_id, :position)
   end
 end
