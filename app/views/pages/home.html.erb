@@ -27,18 +27,6 @@
   <% end %>
 </div>
 
-<div class="row justify-content-center z-1 position-relative">
-    <div class="col-sm-8 position-absolute top-100 start-50 translate-middle">
-    <%= form_with url: jobs_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Enter subject or type of job"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
-    </div>
-    </div>
 
 <% @jobs.each do |job| %>
 <script>

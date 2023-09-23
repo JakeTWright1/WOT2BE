@@ -1,10 +1,10 @@
 <div class="navbar-whole" data-controller="navbar">
   <div class="search-bar d-none" id="search-bar">
-    <%= form_with url: users_path, method: :get, class: "d-flex" do %>
+    <%= form_with url: jobs_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Search for jobs"
+            placeholder: "Search by industry or subject"
         %>
       <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
