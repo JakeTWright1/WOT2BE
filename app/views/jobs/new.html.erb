@@ -9,7 +9,7 @@
   <%= f.input :worst_bits %>
   <%= f.input :qualifications %>
   <%= f.input :industry_id, collection: @industries, label_method: :name ,label: "Select Industry", include_blank: false, selected: @job.industry_id %>
-  <%= f.input :subject_ids, as: :check_boxes, collection: @subjects, label_method: :name, label: "Select Relevant Subjects (choose 3)", input_html: { min: 3, max: 3 }, include_blank: false, selected: @job.subject_ids %>
+  <%= f.input :subject_ids, as: :check_boxes, collection: @subjects, label: "Select Relevant Subjects (choose 3)", input_html: { min: 3, max: 3 }, include_blank: false, selected: @job.subject_ids %>
   <%# <%= f.input :tags, as: :check_boxes, collection: @tags, input_html: { min: 3, max: 3} %>
   <%= f.input :video, as: :file %>
   <%= f.hidden_field :user_id, :value=> "#{current_user.id}" %>
