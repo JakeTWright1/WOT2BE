@@ -24,7 +24,9 @@ class JobsController < ApplicationController
   end
 
   def show
-    @industry = Industry.find_by_id(params[:job_id])
+    # raise
+    # @industry = Industry.find_by_id(params[:id])
+    @favourite = Favourite.find_by(user: current_user, job_id: params[:id])
   end
 
   def new

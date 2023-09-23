@@ -36,7 +36,7 @@
           <div class="btn-group btn-group-sm" style="align-items:center;" role="group" aria-label="Tools for favourites">
 
         <%= link_to "View", job_path(favourite.job), class: 'btn btn-primary'  %>
-         <%= button_to "❌", user_favourite_path(current_user, favourite), method: :delete, class: 'btn btn-asdfoutline-light' %>
+         <%= button_to "❌", favourite_path(favourite), method: :delete, class: 'btn btn-asdfoutline-light' %>
 </div>
           </div>
         </div>
