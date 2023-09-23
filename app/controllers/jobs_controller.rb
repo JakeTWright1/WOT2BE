@@ -11,7 +11,12 @@ class JobsController < ApplicationController
     elsif params[:query].present? && @subjects.exists?(name: "#{params[:query]}")
       subject_name = params[:query]
       @subject = Subject.where("LOWER(subjects.name) LIKE ?", "%#{subject_name.downcase}%").first
-      @results = @subject.jobs
+      if @subject.jobs.empty?
+        @results = []
+        @jobs = Job.all
+      else
+        @results = @subject.jobs
+      end
     else
       @results = []
       @jobs = Job.all

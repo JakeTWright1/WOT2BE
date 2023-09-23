@@ -10,7 +10,6 @@ class FavouritesController < ApplicationController
       redirect_to user_favourites_path, notice: "Job already favourited."
     else
       current_user.favourite_jobs << @job
-      redirect_to user_favourites_path, notice: "Job favourited successfully."
     end
   end
 
