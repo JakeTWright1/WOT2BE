@@ -7,12 +7,13 @@ class JobsController < ApplicationController
     if params[:query].present? && @industries.exists?(name: "#{params[:query].capitalize}")
       industry_name = params[:query]
       found_jobs = Job.joins(:industry).where("LOWER(industries.name) LIKE ?", "%#{industry_name.downcase}%")
-      @jobs = found_jobs
+      @results = found_jobs
     elsif params[:query].present? && @subjects.exists?(name: "#{params[:query]}")
       subject_name = params[:query]
       @subject = Subject.where("LOWER(subjects.name) LIKE ?", "%#{subject_name.downcase}%").first
-      @jobs = @subject.jobs
+      @results = @subject.jobs
     else
+      @results = []
       @jobs = Job.all
     end
   end
