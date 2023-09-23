@@ -2,8 +2,10 @@
 
 <div class="results-container">
   <% if @results.empty? %>
-    <h3 style="color: white">No results found for: <%= params[:query] %></h3>
-    <h3 style="color: white">Listing all jobs</h3>
+    <div class="results-head">
+      <h3 style="color: white">No results found for: <%= params[:query] %></h3>
+      <h3 style="color: white">Listing all jobs</h3>
+    </div>
     <div class="row">
     <% @jobs.each do |job| %>
       <div class="col-md-6 col-sm-12">
@@ -23,7 +25,9 @@
     <% end %>
   </div>
   <% else %>
-    <h3 style="color: white">Showing results for: <%= params[:query] %></h3>
+    <div class="results-head">
+      <h3 style="color: white">Showing results for: <%= params[:query] %></h3>
+    </div>
   <div class="row">
     <% @results.each do |result| %>
       <div class="col-md-6 col-sm-12">

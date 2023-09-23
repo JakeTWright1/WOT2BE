@@ -32,7 +32,18 @@
   z-index: 10;
 }
 
+.form-control {
+  border-radius: 16px !important;
+}
+
 #search-btn {
   background: none;
   border: none;
+}
+
+
+.btn-primary {
+  background-color: rgb(125, 46, 236) !important;
+  border-color: white !important;
+  border-radius: 16px !important;
 }
