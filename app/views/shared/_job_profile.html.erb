@@ -34,6 +34,12 @@
       <h4><%= @job.worst_bits %></h4>
     </div>
     <div class="job-details-card " id="how-to-be">
+    <h3>Degree Required?</h3>
+    <% if @job.degree == true %>
+      <h4>Yes</h4>
+    <% else %>
+      <h4>No</h4>
+    <% end %>
     <h3>Required Qualifications</h3>
     <h4><%= @job.qualifications %></h4>
     <br>
