@@ -43,6 +43,11 @@
     <h3>Required Qualifications</h3>
     <h4><%= @job.qualifications %></h4>
     <br>
+    <% if @job.alternative.present? %>
+      <h3>Options for low-income students</h3>
+      <h4><%= @job.alternative %></h4>
+    <% end %>
+    <br>
     <h3>Recommended Subjects</h3>
       <div class="job-subjects">
       <% @job.subjects.each do |subject| %>
