@@ -28,10 +28,10 @@
     </div>
     <div class="job-details-card" id="pros-and-cons">
       <h3>Best Bits</h3>
-      <h4><%= @job.best_bits %></h4>
+      <h4><em>"<%= @job.best_bits %>"</em></h4>
       <br>
       <h3>Worst Bits</h3>
-      <h4><%= @job.worst_bits %></h4>
+      <h4><em>"<%= @job.worst_bits %>"</em></h4>
     </div>
     <div class="job-details-card " id="how-to-be">
     <h3>Degree Required?</h3>
@@ -40,7 +40,7 @@
     <% else %>
       <h4>No</h4>
     <% end %>
-    <h3>Required Qualifications</h3>
+    <h3>Relevant Degree</h3>
     <h4><%= @job.qualifications %></h4>
     <br>
     <% if @job.alternative.present? %>
