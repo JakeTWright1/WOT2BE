@@ -1,15 +1,13 @@
 .result-card {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
+  margin-left: 25px;
   grid-gap: 10px;
-  margin: 5px;
-
+  margin: 10px 10px;
 }
 
 .card-text {
-  font-size: 40px;
+  font-size: 30px;
   text-shadow: 2px 2px 4px rgb(1, 1, 1,);
   color: #f9f9f9;
   margin-top: 0;
