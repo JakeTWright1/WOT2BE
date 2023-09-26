@@ -9,11 +9,16 @@
 
 .results-container {
   margin: 0 auto;
-  height: 100svh;
+  margin-top: -15px;
+  // height: 100svh;
   overflow: scroll;
+  width: 100vw;
+  margin-bottom: 5px;
+  margin-left: 25px;
 }
 
+
 .results-head {
-  margin-top: 55px;
-  margin-left: 15px;
+  margin-top: 60px;
+  margin-left: 20px;
 }
