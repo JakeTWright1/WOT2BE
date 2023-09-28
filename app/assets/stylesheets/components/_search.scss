@@ -9,14 +9,21 @@
 
 .results-container {
   margin: 0 auto;
-  margin-top: -15px;
+  // margin-top: -15px;
   // height: 100svh;
-  overflow: scroll;
+  // overflow: scroll;
   // width: 100vw;
-  margin-bottom: 5px;
-  margin-left: 25px;
+  // margin-bottom: 5px;
+  // margin-left: 25px;
+  // width: 99vw;
 }
 
+.search-container {
+  height: 100vh;
+  overflow: scroll;
+  margin: 0 5px;
+  width: 98vw;
+}
 
 .results-head {
   margin-top: 60px;
